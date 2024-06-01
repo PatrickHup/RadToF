@@ -78,7 +78,7 @@ Top and bottom view of the board:
 
 <p align="center">
 	<a>
-	    <img src="Pictures/RadToF_realistic.png" alt="Logo" width="726" height="486">
+	    <img src="Pictures/RadToF_assembled.png" alt="Logo" width="726" height="486">
 	</a>
 </p>
 
