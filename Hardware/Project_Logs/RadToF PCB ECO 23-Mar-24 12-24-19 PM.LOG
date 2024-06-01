@@ -1,0 +1,4 @@
+Added Component: Designator=SB4(SB2_0402)
+Added Pin To Net: NetName=NetJ1_3 Pin=SB4-1
+Added Pin To Net: NetName=UART1_TX Pin=SB4-2
+Added Member To Class: ClassName=RadToF Member=Component SB4 SB2_0402

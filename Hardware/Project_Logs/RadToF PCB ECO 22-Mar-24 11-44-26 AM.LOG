@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=R10 NewDesignator=R12
+Change Net Name : Old Net Name=Net_1 New Net Name=NetIC3_8
+Added Member To Class: ClassName=PS Member=Component R12 Resistor 15k +/-1% 0402 63 mW

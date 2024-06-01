@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=3V3 Pin=L8-1
+Removed Pin From Net: NetName=3V3_LN Pin=L8-2
+Removed Member From Class: ClassName=PS Member=L8
+Added Component: Designator=FB1(FP-BLE18-0_15-t0_6-IPC_B)
+Added Pin To Net: NetName=3V3 Pin=FB1-1
+Added Pin To Net: NetName=3V3_LN Pin=FB1-2
+Added Member To Class: ClassName=PS Member=Component FB1 BLE18PS080SN1D

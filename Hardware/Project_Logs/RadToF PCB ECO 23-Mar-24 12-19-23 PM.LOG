@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=ToF_MOSI Pin=IC1-56
+Removed Pin From Net: NetName=CF_SCK Pin=IC1-57
+Removed Pin From Net: NetName=NetJ1_3 Pin=SB4-2
+Removed Pin From Net: NetName=UART1_TX Pin=SB4-2
+Added Pin To Net: NetName=ToF_MOSI Pin=IC1-28
+Added Pin To Net: NetName=CF_SCK Pin=IC1-56
+Add Pin To Net: Unknown Pin: Pin SB4-1
+Added Pin To Net: NetName=JTDO_SWO Pin=IC1-57
+Added Pin To Net: NetName=JTDO_SWO Pin=J3-6
+Added Net: Name=JTDO_SWO

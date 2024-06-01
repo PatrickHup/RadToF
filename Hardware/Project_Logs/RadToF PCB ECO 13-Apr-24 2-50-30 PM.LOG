@@ -1,0 +1,9 @@
+Removed Member From Class: ClassName=OSC_D Member=R8_OSC_D
+Removed Member From Class: ClassName=OSC_F Member=R8_OSC_F
+Added Pin To Net: NetName=NetU1_DS_M4 Pin=U1_DS-M4
+Added Pin To Net: NetName=NetU1_DS_M4 Pin=Y1_OSC_D-3
+Added Net: Name=NetU1_DS_M4
+Added Pin To Net: NetName=NetU1_FS_M4 Pin=U1_FS-M4
+Added Pin To Net: NetName=NetU1_FS_M4 Pin=Y1_OSC_F-3
+Added Net: Name=NetU1_FS_M4
+Added Rule: Name=MaxMinWidth_75
