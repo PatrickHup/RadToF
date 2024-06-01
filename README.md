@@ -102,11 +102,11 @@ The code can be opened using the STM32cubeIDE.
 [ToF_driver_url]: https://www.st.com/en/embedded-software/stsw-img040.html
 
 <!--Subsection PCB-->
-[RadToF.pdf]:                          /RadToF/Project_Output/RadToF.pdf
-[RadToF_PDF3D.pdf]:                    /RadToF/Project_Output/RadToF_PDF3D.pdf
-[RadToF_BOM.xlsx]:                     /RadToF/Project_Output/RadToF_BOM.xlsx
-[RadToF_Draftsman.pdf]:                /RadToF/Project_Output/RadToF_Draftsman.pdf
-[RadToF.xls]:                          /RadToF/Project_Output/RadToF.xls
+[RadToF.pdf]:                          /hardware/Project_Output/RadToF.pdf
+[RadToF_PDF3D.pdf]:                    /hardware/Project_Output/RadToF_PDF3D.pdf
+[RadToF_BOM.xlsx]:                     /hardware/Project_Output/RadToF_BOM.xlsx
+[RadToF_Draftsman.pdf]:                /hardware/Project_Output/RadToF_Draftsman.pdf
+[RadToF.xls]:                          /hardware/Project_Output/RadToF.xls
 
 
 
