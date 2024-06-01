@@ -91,9 +91,13 @@ The code can be opened using the STM32cubeIDE.
 ## Acknowledgment
 
 Thanks goes to:
+
 Professor: Prof. Dr. Luca Benini
+
 Supervisors: Dr. Tomasso Polonelli and Andrea Ronco
+
 PCB experts: Hanna Müller and Alfonso Blanco
+
 Additional help: Tim Distel and Luka Schultess
 
 <!-- MARKDOWN LINKS & IMAGES -->
