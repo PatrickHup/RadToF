@@ -35,6 +35,7 @@
   * [Components](#hardware)
   * [PCB](#pcb)
 * [Firmware](#firmware)
+* [Acknowledgment](#acknowledgment)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -86,6 +87,14 @@ Top and bottom view of the board:
 The current state of the firmware is to be able to verify if the board is functional or not. The driver of the radar was provided by [tim distel] and the driver of the ToF can be found here: [ToF driver][ToF_driver_url].
 
 The code can be opened using the STM32cubeIDE.
+
+## Acknowledgment
+
+Thanks goes to:
+Professor: Prof. Dr. Luca Benini
+Supervisors: Dr. Tomasso Polonelli and Andrea Ronco
+PCB experts: Hanna Müller and Alfonso Blanco
+Additional help: Tim Distel and Luka Schultess
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
