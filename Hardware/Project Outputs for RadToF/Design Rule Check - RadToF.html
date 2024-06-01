@@ -1,0 +1,676 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD24\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">26-Apr-24</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:06:09 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc" class="file"><acronym title="C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc">C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">20</td></tr>
+</table>
+</td>
+</table><a name="IDQR4HQCPXHHEUPUBBJZ4LNHJK5KSBRYPIUC1BLFM1RKAL3HHYETRC"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAFBLC4I2RZSHBOKITPUIJGKD5PROIY2GPP5T00HRMUPKD4AZJWQL">Clearance Constraint (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUEDIRD0YZ5J0M3MOZ552NZNQIGRJR3LGPMPEP5CT3UULQCA1ZT4E">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDE410Z3F4CA1VI4ZYPQSTXLRTJKAAO3L1AY2UY3EUSHRM30YGAMTM">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTGUONJF31QTID0JPTJFVJEAJSKMFKYXTOPDWT5E2A3DJ334DVFLE">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGQYWTP4SLG3LPUGAEHXVN21XEHMLV4IWDFTNTNBKRCPOFDBK3PRL">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetR2_DS_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWBDPJAAOOFMPDRXXKTI4ZND4PDZLPEPWSC2SAJDSFRE2TPYOY0D">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ2_5'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4FZLR4FHNBVMNIA55K1YC3GZSBI4MV3CZ022RXNBK4KCYX541W4I">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetR5_DS_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2HTOIVL2WCWZJWGBFVAZX5LUIU1UVI24GDG0NIX2X0DUY3H3SFP">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetR2_FS_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZUNOGXGHPMGOIZTSURZ1PT3HHEM4YSRAS4M5UZED5TEW1QXHBWDM">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ2_4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTFEY1VBXVTIVCFR2XPD2MP1N5CZDQMRCKREND0OB5MUO3ZNMLHVP">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ1_6'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZE22BRWWOLDMKJEFQSYHSPXUJGPWQJPNTNKQYSHFEGHUCOKLUBFO">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ1_3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0KMTM12OWH1VOWFTH4KAIXQCBEMQJWSH5QKFPBE2TM2QBE2TUDBM">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ2_3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDN3T035GYS1IPJKROSIBNWRTUOEIVOYBIU330QN5SBPWOKIOIPFO">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ1_7'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWNLTAVVWUSXPD44WBKO0KN2G3EFZPWG1FTXCKZN2ZIZ3LNDQWF">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB5_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDP50DCPX11LRGDTDEHRLJUWPLCN1LFCOAJ01QVWLPFHUI0AEJDCYM">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB4_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDCZFNXLKOABFP3FVMRYIQJ2PUF442A0SMTPA1WK42LOANIUW5WAL">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetU1_FS_M4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3VHKSSXB0H0ECEZST0RUOZVARQSWOJWLDBK3IDRUY4HNVOBJ1RE">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetU1_DS_M4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOWGCUTI1JZMEBTNSA3P1MNI5JPRBTIWR3L4ZOLOHGPCI4IDSSNHN">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB3_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDQ4P0O4LGXMYIQIC2XNGS5NPSMK1U1MDQ2VSYKPDGV5TQMPQSR3N">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB1_OSC_D_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWQIFO4YVS232JKPVKSSCTD1K1BKMRA0UOVFZ5YPDZVFIHLYYO1RF">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetR5_FS_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRSZDMMPBEKLLLBSFWL2OQLYIPKF1QMGYKWGRAHLSKHRC4CWT1LTC">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB2_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUT3GNYM0NAC5OKQDQGQZQ31ZLHJR4H01VMQFCHMHHMFL4H45ORJ">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB1_OSC_F_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWAILNJMYM5U0YSFNA44HKBI3JXCIGNAJV1EFIOQ2AIEWLBIL5VI">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.254mm) (InNet('GND'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID31TCPFT2E3VADZXVPPGPOJODZP0QZJ5E5AQFOOIZQNCCYGX2HCEF">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('CF_SCK'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFMGX1Q0U3ZWDHRG5AVMZJRBEXMHEGGTXO4W14LDRAADUDU01KIJM">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('JTCK_SWCLK'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWQ4Z5H5CZKURBVUX5FKGBZ1BHF0RKUTBMBQ0WQM2A43C10BVXHOF">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('INT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVF30I1UBLOZXGDLBFBC2VA5UFFHOM0BC45G1GTCDNCQ3J3QMJLEB">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('CF_MOSI'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID010E5Z2XYTM4BGPMNVUHXH1APP34W1NHRAW4QBLNM2PGNP3WGO1E">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.254mm) (InNet('1V8'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPD0HCJAS0JGMCSKX2JNRV2NSWG2CFSBPHKCJRIHHF0TSRUDP5SAG">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('\R\S\T\'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTHBQEMO2ZBYHDOQUVKNL045UVDRK4ODIC4SWOEKE0YWEYI4LGRRO">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('CF_MISO'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEX2DUXKYWRT4CXYWNRPBADT5JONAQYGCQOLZMJU04IPBVKUVNDK">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.254mm) (InNet('1V8_LN'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQKY4WVDKXL1IPQOPXN14RI53MJ1RAJQPNGPKOYJWPWDAYUOX05EP">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetIC3_8'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5K1YPUBF0411FJD3URKYP50CLFGI2KW514RBEQGDVL4X5AC0XOZD">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetIC1_62'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDT4Z0HPOFSROUNJTAU1AJN1QATB3KPILEF51SQE5M0ABR2IRPGEP">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ1_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZROQ0LZKEGKSL2XNXSSAPTVXEB3NXGTBN5VSPZE12A4CIIP3ON1M">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetIC3_9'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQBYOHKFPUG0PLEEGHQTB2GXBLE0MXGTTFK2QMEOYHIWAX0YCLBF">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetC59_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVXEXJACWEB21FIZJ10KSAC5EQI2IS4XG1AI0IDJLRHVDSCZKWBKC">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('JTSM_SWDIO'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFVQTLV0X2YR2CQN1L0LSAZDNRKMKSFVICC03IADDX5EWHEYNRUTH">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('JTDO_SWO'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYJUAYDNAV3CQHB1ZGI0HSZHI11RDGSPH0QF5KND4ZWUYLECVZRF">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetC57_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYRAMTO3FSIMCDWD34HDB4YGXVFZVZW3ZYCHCIUHBB11VRHTW4CBC">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetC55_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJMVIO11W3NZPLJGRGGRZW1BBLN1PAYJNNQJDT4MUGFXBG2JWT2AF">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('UART1_RX'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBWPWZKOKAQB1FWVG3NWUN1E2WK12HD2DRJP0MVDRPO45FX5QLSJL">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF_SCK'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMHHK5ETGBQ0YNXVM3W0XLO0D4FPKBSEHAEZAQJFUVSSB3R1UNPAC">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VA_REF'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYWHLG3UDWNR5OVZKQJET4LKQDPKQZGMRHQJZE5CGNV2XETATSWEM">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('UART1_TX'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXDPKYFMTFJKCCF3RUTHYMWBRTBQC2PRHOKPT3UFIZKCOPKT5XBRD">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF2_SYNC'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSW2G3HIUMQXEFFS2EJ5GTXSDK5I5V4EQUWHQFDJDF55AXGJDQQF">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF2_INT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWVRD0ZEZFZCFGFMEE15RTIY15CMGJYS2IHVCGWI2LOS1IDGUL3KK">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF_MOSI'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRSZIFD51DK3AC51IF3SP4WSTQGFCBEBAPSSJYCIZEHA21PZ455C">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF_MISO'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWKSIU3HMPPDLLPA1FPWFGAYHLIK1ME1VXEJUIIOZOF5LSI2VAVKO">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDDD'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRAHAZCI5P13MDGUYWTLRD3VRHEN135LSKN5AY5COFO0N5JL4RWIN">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_VCO'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNQWI3KNMM4WOBJ3QAOK2XR25TDDNYZRKEY3CPZHAV0RS2Y0ZL0XN">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.254mm) (InNet('3V3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTZM2DBT4NCQLBK3YII1GQOMU4FOCXXZYBL1ZTPH3QF4LSU25OJOH">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetC47_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI01G2CJWD4KBIEHSZIS4PG35QHMKNWJOBC1P4MHDXGGO2EAXZZOI">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_LF'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGEMC53U1ISH2N4UZOWEA12BTWNZEY2P0AVKAR3IXIXFIWQ0KN2BH">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_AD'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDY11YTAVDUTZ0PVNFDZOZSH5FOBZY1NN2SIZRPTINO141QIFLHLZG">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_RF'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQH5KGBU2JWE4FBTASE5EJJ3IAJWB1FODX10SVEFJPMGERHXSUZ5P">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_PLL'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDX2FFU4MJ1VWXG205I2BKX0JIDJ0KUXBGBJXU4KUVKT23EAEC35C">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF2_CSN'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTDH2HZNPK3M0CXSYOSTK2DSOGOFZWDSKRUUGT4BIRZSM2LB1LX4K">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_IQR'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWW1ECHX52G0KEF2MAFUXSAEWJX0AZTOPRQHWEMNZPSX4UQANRDM">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_CSN'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUK4UKWCGCKF3PLZULWZEQ1NPIGQGKPYJXCLMVHGSXGIXXR33N2XO">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_MOSI'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDT0OSXQWB0AW4M2P5MWKAHDFKUETRDFNZDE00I1Z5IWP0KQIUHF">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_MISO'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWQOP5LUA00CQFJB3QWLFWHHLMVN11A3GZ4ZPWDHVLPKKLLNYAH">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetU3_L1_11'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVB45UWYELX25HRRXM5V3ZA0YABWXBYIBKWITVBCSO5WHTM0CX1G">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetU3_L1_6'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2NJJWVOR25VSNWCHYXS1ZZLGCNTY5WCBFFHAXNGRXKMQLT1CR3ZK">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('R\A\D\A\R\2\_\R\S\T\'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIDDYOR22RH3UJPCF2IGS1OGU2KUWAAYPQ2ERAHKI10DUYRV1M5P">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('R\A\D\A\R\1\_\R\S\T\'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFTILK04LPHOXOHURLPEOFFBPDDVOOIOSPS5AYEMM3TPSNYME0CD">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF1_CSN'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0554RCETXANZM5L0KMGCD4I2NPYN3HQIP2PO0VGXM123G2IPVEKL">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR2_MOSI'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWSPR25LHMDHOEVTEP4FDJW0FMMLASZSRWQP04FMCE2RD3R1WH3KB">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF1_SYNC'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTUGAZZHR0LMIJGGH1KTR55IZ0BZCXJQU3LI455FRAEI3RHTDAAYJ">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF1_INT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDWPOY34PN3XBIBV1JEFYHHR2RBTL3ER4EP1N1YCII4D5WSZGQURG">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR2_CSN'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJIX50OCTMX5HOIX1MKXTZPLJ2OSLNEXP04QAH3DKJ1LE4MT4RZZN">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_SCK'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUXTXSL1YCFQEOLR0P5ODQD5ZZPRPHJ1XIJLCJPNHYUHB0H0CEEBI">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR2_MISO'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYZQ5MZ05LU5AO3MMB1WNGLKRJGPPD1XV5X4VTIKXKKBSAGXG5BSE">Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR2_IQR'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJRQWUQXM5AJOI0V1SYIMOHOUKUMAKIKXHXN5PLPKDPCEMEI2T3P">Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=1mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.4mm) (MaxWidth=1.3mm) (PreferedWidth=0.6mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZL354BC0SCB0PI3VXJDUKJZZIKHS325MV5XLKNFEEJPCNULQIDXK">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.254mm) (Max=0.254mm) (Prefered=0.254mm)  and Width Constraints (Min=0.381mm) (Max=0.381mm) (Prefered=0.381mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWNTEDIFTMFV4AMSMTF0VB3PBECSDZ5FYC5GCGOBH1UBL0IP5KWC">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSRJCQGZKEXZRLYEN3GQ120GNDMGSTC105LKCQHGL3WFJWIWYXHCI">Hole Size Constraint (Min=0.2mm) (Max=6mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGIME0Z4LS1U2DWEB0LSNKAVJTMGDPAK2HFWUOWJBLO3Z01DGF0TK">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGHAS4HVCKTE3OW4GWKNHCQ3OWPOWYWEZR4R2Y3HGZ2AKE0T1AQC">Silk to Silk (Clearance=0.01mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0F2AVBYBHDK2GT05HXOGKHCR1OC0PMSMMT0EQGOHGVMEAV55A0AK">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDN0UP4YKYTOD1LTM11JYID03AMLZTV1QFQQSBFNB4KPDIZH3XFUGE">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">10</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDETOBRIRCAUKMPY134HQBAZYMDNSGXWEPIASW5WOPNYKO5FB2RO4G">Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID45WWKTZZU41COFYGPZGU3GOGLIWZMGQBHGHU50JEC03ISEMVCE0J">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">20</td>
+</tr>
+</table><br><a name="IDAFBLC4I2RZSHBOKITPUIJGKD5PROIY2GPP5T00HRMUPKD4AZJWQL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.1mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2476.534mil|Location2.X=2480.159mil|Location1.Y=2372.203mil|Location2.Y=2375.828mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2476.534mil|Location2.X=2480.159mil|Location1.Y=2372.203mil|Location2.Y=2375.828mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.1mm) Between Pad SB2-2(63.2mm,60.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2476.534mil|Location2.X=2480.159mil|Location1.Y=2135.983mil|Location2.Y=2139.608mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2476.534mil|Location2.X=2480.159mil|Location1.Y=2135.983mil|Location2.Y=2139.608mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.1mm) Between Pad SB4-2(63.2mm,54.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2478.503mil|Location2.X=2482.127mil|Location1.Y=2450.944mil|Location2.Y=2454.568mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2478.503mil|Location2.X=2482.127mil|Location1.Y=2450.944mil|Location2.Y=2454.568mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.1mm) Between Pad SB5-2(63.25mm,62.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1771.818mil|Location2.X=1775.442mil|Location1.Y=2421.613mil|Location2.Y=2425.238mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1771.818mil|Location2.X=1775.442mil|Location1.Y=2421.613mil|Location2.Y=2425.238mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.1mm) Between Pad U2_DS-1(45.15mm,61.605mm) on Bottom Layer And Pad U2_DS-A1(44.992mm,61.305mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2142.703mil|Location2.X=2146.328mil|Location1.Y=1521.121mil|Location2.Y=1524.745mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2142.703mil|Location2.X=2146.328mil|Location1.Y=1521.121mil|Location2.Y=1524.745mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.1mm) Between Pad U2_FS-1(54.57mm,38.732mm) on Top Layer And Pad U2_FS-A1(54.728mm,38.432mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDUEDIRD0YZ5J0M3MOZ552NZNQIGRJR3LGPMPEP5CT3UULQCA1ZT4E"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad SB2-2(63.2mm,60.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad SB4-2(63.2mm,54.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad SB5-2(63.25mm,62.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad U2_DS-1(45.15mm,61.605mm) on Bottom Layer And Pad U2_DS-A1(44.992mm,61.305mm) on Bottom Layer Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad U2_FS-1(54.57mm,38.732mm) on Top Layer And Pad U2_FS-A1(54.728mm,38.432mm) on Top Layer Location : [X = 0mm][Y = 0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDN0UP4YKYTOD1LTM11JYID03AMLZTV1QFQQSBFNB4KPDIZH3XFUGE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1802.572mil|Location2.X=1813.664mil|Location1.Y=2900.781mil|Location2.Y=2911.873mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1802.572mil|Location2.X=1813.664mil|Location1.Y=2900.781mil|Location2.Y=2911.873mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.187mm &lt; 0.25mm) Between Board Edge And Track (45.45mm,73.175mm)(45.926mm,73.651mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1802.572mil|Location2.X=1813.664mil|Location1.Y=2900.781mil|Location2.Y=2911.873mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1802.572mil|Location2.X=1813.664mil|Location1.Y=2900.781mil|Location2.Y=2911.873mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.187mm &lt; 0.25mm) Between Board Edge And Track (45.926mm,73.651mm)(49.174mm,73.651mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1930.43mil|Location2.X=1941.523mil|Location1.Y=2900.781mil|Location2.Y=2911.873mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1930.43mil|Location2.X=1941.523mil|Location1.Y=2900.781mil|Location2.Y=2911.873mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.187mm &lt; 0.25mm) Between Board Edge And Track (49.174mm,73.651mm)(49.6mm,73.225mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2068.334mil|Location2.X=2079.426mil|Location1.Y=2899.773mil|Location2.Y=2910.865mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2068.334mil|Location2.X=2079.426mil|Location1.Y=2899.773mil|Location2.Y=2910.865mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.238mm &lt; 0.25mm) Between Board Edge And Track (51.552mm,72.476mm)(52.677mm,73.6mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2068.334mil|Location2.X=2079.426mil|Location1.Y=2899.773mil|Location2.Y=2910.865mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2068.334mil|Location2.X=2079.426mil|Location1.Y=2899.773mil|Location2.Y=2910.865mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.238mm &lt; 0.25mm) Between Board Edge And Track (52.677mm,73.6mm)(58.75mm,73.6mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2484.691mil|Location2.X=2497.051mil|Location1.Y=1744.216mil|Location2.Y=1756.673mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2484.691mil|Location2.X=2497.051mil|Location1.Y=1744.216mil|Location2.Y=1756.673mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.198mm &lt; 0.25mm) Between Board Edge And Track (57.404mm,44.577mm)(63.119mm,44.577mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2536.204mil|Location2.X=2547.296mil|Location1.Y=1889.454mil|Location2.Y=1900.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2536.204mil|Location2.X=2547.296mil|Location1.Y=1889.454mil|Location2.Y=1900.546mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.165mm &lt; 0.25mm) Between Board Edge And Track (57.404mm,48.133mm)(64.389mm,48.133mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2307.446mil|Location2.X=2318.538mil|Location1.Y=2899.773mil|Location2.Y=2910.865mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2307.446mil|Location2.X=2318.538mil|Location1.Y=2899.773mil|Location2.Y=2910.865mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.238mm &lt; 0.25mm) Between Board Edge And Track (58.75mm,73.6mm)(63.25mm,69.1mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2536.204mil|Location2.X=2547.296mil|Location1.Y=1799.454mil|Location2.Y=1810.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2536.204mil|Location2.X=2547.296mil|Location1.Y=1799.454mil|Location2.Y=1810.546mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.165mm &lt; 0.25mm) Between Board Edge And Track (63.119mm,44.577mm)(64.389mm,45.847mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2536.204mil|Location2.X=2547.296mil|Location1.Y=1799.454mil|Location2.Y=1810.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2536.204mil|Location2.X=2547.296mil|Location1.Y=1799.454mil|Location2.Y=1810.546mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.165mm &lt; 0.25mm) Between Board Edge And Track (64.389mm,45.847mm)(64.389mm,48.133mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

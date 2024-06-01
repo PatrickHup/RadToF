@@ -1,0 +1,7 @@
+../Core/Src/platform.c:28:9:RdByte	1
+../Core/Src/platform.c:36:9:WrByte	1
+../Core/Src/platform.c:44:9:WrMulti	5
+../Core/Src/platform.c:94:9:RdMulti	4
+../Core/Src/platform.c:140:9:Reset_Sensor	1
+../Core/Src/platform.c:147:6:SwapBuffer	2
+../Core/Src/platform.c:166:9:WaitMs	1

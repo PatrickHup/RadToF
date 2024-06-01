@@ -1,0 +1,7 @@
+../Core/Src/platform.c:28:9:RdByte	24	static
+../Core/Src/platform.c:36:9:WrByte	16	static
+../Core/Src/platform.c:44:9:WrMulti	4152	static
+../Core/Src/platform.c:94:9:RdMulti	4144	static
+../Core/Src/platform.c:140:9:Reset_Sensor	16	static
+../Core/Src/platform.c:147:6:SwapBuffer	24	static
+../Core/Src/platform.c:166:9:WaitMs	16	static

@@ -1,0 +1,278 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Patrick\patrick_hupertz_401\RadToF\RadToF.PcbDoc
+Date     : 26-Apr-24
+Time     : 12:06:09 PM
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
+   Violation between Clearance Constraint: (Collision < 0.1mm) Between Pad SB2-2(63.2mm,60.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 0.1mm) Between Pad SB4-2(63.2mm,54.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 0.1mm) Between Pad SB5-2(63.25mm,62.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 0.1mm) Between Pad U2_DS-1(45.15mm,61.605mm) on Bottom Layer And Pad U2_DS-A1(44.992mm,61.305mm) on Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 0.1mm) Between Pad U2_FS-1(54.57mm,38.732mm) on Top Layer And Pad U2_FS-A1(54.728mm,38.432mm) on Top Layer 
+Rule Violations :5
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Pad SB2-2(63.2mm,60.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad SB4-2(63.2mm,54.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad SB5-2(63.25mm,62.05mm) on Bottom Layer And Region (0 hole(s)) Bottom Layer Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad U2_DS-1(45.15mm,61.605mm) on Bottom Layer And Pad U2_DS-A1(44.992mm,61.305mm) on Bottom Layer Location : [X = 0mm][Y = 0mm]
+   Violation between Short-Circuit Constraint: Between Pad U2_FS-1(54.57mm,38.732mm) on Top Layer And Pad U2_FS-A1(54.728mm,38.432mm) on Top Layer Location : [X = 0mm][Y = 0mm]
+Rule Violations :5
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetR2_DS_1'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ2_5'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetR5_DS_1'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetR2_FS_1'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ2_4'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ1_6'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ1_3'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ2_3'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ1_7'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB5_2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB4_2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetU1_FS_M4'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetU1_DS_M4'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB3_2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB1_OSC_D_1'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetR5_FS_1'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB2_2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetSB1_OSC_F_1'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.254mm) (InNet('GND'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('CF_SCK'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('JTCK_SWCLK'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('INT'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('CF_MOSI'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.254mm) (InNet('1V8'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('\R\S\T\'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('CF_MISO'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.254mm) (InNet('1V8_LN'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetIC3_8'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetIC1_62'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetJ1_2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetIC3_9'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetC59_2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('JTSM_SWDIO'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('JTDO_SWO'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetC57_2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetC55_2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('UART1_RX'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF_SCK'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VA_REF'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('UART1_TX'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF2_SYNC'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF2_INT'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF_MOSI'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF_MISO'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDDD'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_VCO'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.254mm) (InNet('3V3'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetC47_2'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_LF'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_AD'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_RF'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('VDD_PLL'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF2_CSN'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_IQR'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_CSN'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_MOSI'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_MISO'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetU3_L1_11'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('NetU3_L1_6'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('R\A\D\A\R\2\_\R\S\T\'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('R\A\D\A\R\1\_\R\S\T\'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF1_CSN'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR2_MOSI'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF1_SYNC'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('ToF1_INT'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR2_CSN'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR1_SCK'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR2_MISO'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=0.254mm) (Preferred=0.152mm) (InNet('RADAR2_IQR'))
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=1mm) (PreferredHoleWidth=0.3mm) (MinWidth=0.4mm) (MaxWidth=1.3mm) (PreferedWidth=0.6mm) (All)
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.254mm) (Max=0.254mm) (Prefered=0.254mm)  and Width Constraints (Min=0.381mm) (Max=0.381mm) (Prefered=0.381mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=6mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.01mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
+   Violation between Board Outline Clearance(Outline Edge): (0.187mm < 0.25mm) Between Board Edge And Track (45.45mm,73.175mm)(45.926mm,73.651mm) on Bottom Layer 
+   Violation between Board Outline Clearance(Outline Edge): (0.187mm < 0.25mm) Between Board Edge And Track (45.926mm,73.651mm)(49.174mm,73.651mm) on Bottom Layer 
+   Violation between Board Outline Clearance(Outline Edge): (0.187mm < 0.25mm) Between Board Edge And Track (49.174mm,73.651mm)(49.6mm,73.225mm) on Bottom Layer 
+   Violation between Board Outline Clearance(Outline Edge): (0.238mm < 0.25mm) Between Board Edge And Track (51.552mm,72.476mm)(52.677mm,73.6mm) on Bottom Layer 
+   Violation between Board Outline Clearance(Outline Edge): (0.238mm < 0.25mm) Between Board Edge And Track (52.677mm,73.6mm)(58.75mm,73.6mm) on Bottom Layer 
+   Violation between Board Outline Clearance(Outline Edge): (0.198mm < 0.25mm) Between Board Edge And Track (57.404mm,44.577mm)(63.119mm,44.577mm) on Bottom Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (0.165mm < 0.25mm) Between Board Edge And Track (57.404mm,48.133mm)(64.389mm,48.133mm) on Bottom Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (0.238mm < 0.25mm) Between Board Edge And Track (58.75mm,73.6mm)(63.25mm,69.1mm) on Bottom Layer 
+   Violation between Board Outline Clearance(Outline Edge): (0.165mm < 0.25mm) Between Board Edge And Track (63.119mm,44.577mm)(64.389mm,45.847mm) on Bottom Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (0.165mm < 0.25mm) Between Board Edge And Track (64.389mm,45.847mm)(64.389mm,48.133mm) on Bottom Overlay 
+Rule Violations :10
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 20
+Waived Violations : 0
+Time Elapsed        : 00:00:02
