@@ -1,8 +1,0 @@
-Removed Pin From Net: NetName=3V3 Pin=P1-1
-Removed Pin From Net: NetName=1V8 Pin=P2-1
-Removed Pin From Net: NetName=3V3_LN Pin=P3-1
-Removed Pin From Net: NetName=1V8_LN Pin=P4-1
-Removed Member From Class: ClassName=RadToF Member=P1
-Removed Member From Class: ClassName=RadToF Member=P2
-Removed Member From Class: ClassName=RadToF Member=P3
-Removed Member From Class: ClassName=RadToF Member=P4

@@ -1,9 +1,0 @@
-Added Component: Designator=J?(CrazyFlieConnector_2)
-Added Pin To Net: NetName=\R\S\T\ Pin=J3-1
-Added Pin To Net: NetName=JTCK_SWCLK Pin=IC1-52
-Added Pin To Net: NetName=JTCK_SWCLK Pin=J3-5
-Added Net: Name=JTCK_SWCLK
-Added Pin To Net: NetName=JTSM_SWDIO Pin=IC1-49
-Added Pin To Net: NetName=JTSM_SWDIO Pin=J3-4
-Added Net: Name=JTSM_SWDIO
-Added Member To Class: ClassName=RadToF Member=Component J? Right
