@@ -15,7 +15,7 @@
 <br />
 <p align="center">
   <a>
-    <img src="Pictures/RadToF_Main.png" alt="Logo" width="529" height="400">
+    <img src="Pictures/RadToF_Main.png" alt="Logo" width="693" height="313">
   </a>
 
   <h3 align="center">"RadToF" Radar/ToF Deck</h3>
