@@ -106,7 +106,7 @@ Additional help: Tim Distel and Luka Schultess
 <!--Subsection Hardware-->
 [VL53L5CX_url]:    			https://www.st.com/resource/en/datasheet/vl53l5cx.pdf
 [crazyflie_url]:   			https://www.bitcraze.io/products/crazyflie-2-1/
-[BGT60TR13C_url]:			https://www.infineon.com/dgdl/Infineon-DS_BGT60TR13C-DataSheet-v02_49-EN.pdf
+[BGT60TR13C_url]:			https://www.infineon.com/dgdl/Infineon-DS_BGT60TR13C-DataSheet-v02_49-EN.pdf?fileId=8ac78c8c7d718a49017d94bac88e5d43
 [STM32H562RIV6_url]:			https://www.st.com/resource/en/datasheet/stm32h562ag.pdf
 [TPSM82912RDUR_url]:			https://www.ti.com/lit/ds/symlink/tpsm82913e.pdf
 [TPS7A2018PDQNR_url]:			https://www.ti.com/lit/ds/symlink/tps7a20.pdf
