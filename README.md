@@ -40,23 +40,23 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The project aims to develop an Printed Circuit Board (PCB) optimized for drones, with a key focus on implementing the 60 GHz radar by Infineon Technologies. The goal is to enable drones to navigate more effectively and efficiently. This effort is driven by the increasing importance of autonomous nano drones across various sectors, where sophisticated perception systems are crucial for safety and operational efficiency. By equipping drones with a radar system that delivers precise and reliable data, collision risks can be minimized, and operational autonomy can be improved.
+The RadToF project aims to develop a Printed Circuit Board (PCB) optimized for drones, with a key focus on implementing the 60 GHz radar by Infineon Technologies. The goal is to enable drones to navigate more effectively and efficiently, driven by the increasing importance of autonomous nano drones across various sectors where sophisticated perception systems are crucial for safety and operational efficiency. By equipping drones with a radar system that delivers precise and reliable data, collision risks can be minimized, and operational autonomy can be improved.
 
-**WARNING: USE AT YOUR OWN DISCLOSURE, THERE MIGHT BE BUGS IN SOFT AND HARDWARE**
+**WARNING: USE AT YOUR OWN RISK, THERE MAY BE BUGS IN BOTH SOFTWARE AND HARDWARE**
 
 ## Hardware
 
-The PCB accomodates 4 sensors, a radar and depth camera pointing forwards, and the same setup pointing downwards. This board also implements an MCU, which performs data processing before sending it to the CrazyFlie. 
+The PCB accommodates four sensors: a radar and a depth camera pointing forwards, and the same setup pointing downwards. This board also includes an MCU that processes data before sending it to the CrazyFlie.
 
 ### Components
-The main sensor is the 60 GHz Radar by Infineon Technologies. This radar uses FMCW (Frequency Modulated Coninuous Wave) operations to measure distances. The radar comes in a compact design with built-in transmitter and 3 receivers. In addition to the radar, we utilize a 8x8 zone ranging sensor by STMicroelectronics. As mentioned before, a MCU is needed to perform data processing. We have opted for the STM32H562RIV6 for its performance and small form factor.
+The main sensor is the 60 GHz radar by Infineon Technologies, using FMCW (Frequency Modulated Continuous Wave) operations to measure distances. The radar features a compact design with a built-in transmitter and three receivers. Additionally, we utilize an 8x8 zone ranging sensor by STMicroelectronics. The MCU chosen for this project is the STM32H562RIV6, selected for its performance and small form factor.
 
-An important aspect of the board is its power supply. The radar requires ultra low noise 1V8 and 3V3. To achieve this, we ustilize the "Ultra low-noise low ripple" powersupply by Texas Intruments.
+An important aspect of the board is its power supply. The radar requires ultra-low noise 1V8 and 3V3, achieved using the "Ultra low-noise low ripple" power supply by Texas Instruments.
 
 Main components:
 
 * [BGT60TR13C][BGT60TR13C_url],			  60 GHz radar
-* [VL53L5CX][VL53L5CX_url],     		  ToF multizone ranging sensor
+* [VL53L8CX][VL53L8CX_url],     		  ToF multizone ranging sensor
 * [STM32H562RIV6][STM32H562RIV6_url],		  Microcontroller
 * [TPSM82912RDUR][TPSM82912RDUR_url],		  Ultra low noise switching regulator
 
@@ -66,7 +66,7 @@ Additional components:
 * [SN74AXC4T774BQB][SN74AXC4T774BQB_url],	  Level shifter
 
 ### PCB 
-The RadTof printed circuit board (PCB) was printed on a 4-Layer Flex-Rigid PCB with a total thickness of 0.84mm. Further information about the PCB can be found here:
+The RadToF printed circuit board (PCB) is fabricated on a 4-layer Flex-Rigid PCB with a rigid PCB thickness of 0.84mm and a flex thickness of 0.16mm. Further information about the PCB can be found here:
 
 File                                  | Content
 --------------------------------------|--------
@@ -90,9 +90,9 @@ The current state of the firmware is to be able to verify if the board is functi
 
 HOW TO:
 
-1. Download STM32cubeIDE and foler "Firmware"
+1. Download STM32cubeIDE and the "Firmware" folder
 
-2. open ".project" file with STM32cubeIDE
+2. open '.project' file with STM32cubeIDE
 
 3. Connect extension board with computer with ST-LINK
 
@@ -114,7 +114,7 @@ Additional help: Tim Distel and Luka Schultess
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 <!--Subsection Hardware-->
-[VL53L5CX_url]:    			https://www.st.com/resource/en/datasheet/vl53l5cx.pdf
+[VL53L8CX_url]:    			https://www.st.com/resource/en/datasheet/vl53l8cx.pdf
 [crazyflie_url]:   			https://www.bitcraze.io/products/crazyflie-2-1/
 [BGT60TR13C_url]:			https://www.infineon.com/dgdl/Infineon-DS_BGT60TR13C-DataSheet-v02_49-EN.pdf?fileId=8ac78c8c7d718a49017d94bac88e5d43
 [STM32H562RIV6_url]:			https://www.st.com/resource/en/datasheet/stm32h562ag.pdf
