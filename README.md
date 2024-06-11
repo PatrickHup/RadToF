@@ -42,6 +42,8 @@
 
 The project aims to develop an Printed Circuit Board (PCB) optimized for drones, with a key focus on implementing the 60 GHz radar by Infineon Technologies. The goal is to enable drones to navigate more effectively and efficiently. This effort is driven by the increasing importance of autonomous nano drones across various sectors, where sophisticated perception systems are crucial for safety and operational efficiency. By equipping drones with a radar system that delivers precise and reliable data, collision risks can be minimized, and operational autonomy can be improved.
 
+**WARNING: USE AT YOUR OWN DISCLOSURE, THERE MIGHT BE BUGS IN SOFT AND HARDWARE**
+
 ## Hardware
 
 The PCB accomodates 4 sensors, a radar and depth camera pointing forwards, and the same setup pointing downwards. This board also implements an MCU, which performs data processing before sending it to the CrazyFlie. 
@@ -84,9 +86,17 @@ Top and bottom view of the board:
 
 ## Firmware
 
-The current state of the firmware is to be able to verify if the board is functional or not. The driver of the radar was provided by [tim distel] and the driver of the ToF can be found here: [ToF driver][ToF_driver_url].
+The current state of the firmware is to be able to verify if the board is functional or not. The driver of the radar was provided by Tim Distel and the driver of the ToF can be found here: [ToF driver][ToF_driver_url].
 
-The code can be opened using the STM32cubeIDE.
+HOW TO:
+
+1. Download STM32cubeIDE and foler "Firmware"
+
+2. open ".project" file with STM32cubeIDE
+
+3. Connect extension board with computer with ST-LINK
+
+4. Compilie and upload firmware
 
 ## Acknowledgment
 
