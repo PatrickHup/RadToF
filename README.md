@@ -84,6 +84,34 @@ Top and bottom view of the board:
 	</a>
 </p>
 
+Solder instruction:
+
+Top side:
+
+1. Pre-heat the PCB over 2-3 hours from room temperature to 250 °C to allow water molecules in flex pcb to evaporate. This prevents delamination.
+2. Apply 217 °C solder paste on side marked "Top" with the help of a stencil if availible. NOTE: do not apply solder paste on sensor pads.
+3. Place components. Except the sensors (radar and ToF).
+5. Place assembled board, "Top" side up, on pre preheated (250 °C) hot plate.
+6. Wait for solder paste to melt and remove to cool.
+7. Verify functionality of power supply by checking voltages on debug pads.
+
+Bottom side:
+
+1. Apply 217 °C solder paste on side marked "Bottom" with the help of a sencil if availible. NOTE: do not apply solder paste on sensor pads.
+2. Place components. Except the sensors (radar and ToF).
+3. Place assembled board, "Bottom" side up, on pre preheated (150 °C) hot plate.
+4. Use hot air gun, set to 395 °C, to carefully melt solder paste.
+5. Verify functionality of MCU by trying to program it.
+
+Radar soldering:
+
+1. Do not apply solder paste
+2. place on 150 °C pre heated hot plate
+3. heat with heat gun set to 395 °C till soldered
+
+NOTE: if radar soldered unevenly, remove solder paste on pads and radar. Re-ball with stencil
+
+
 ## Firmware
 
 The current state of the firmware is to be able to verify if the board is functional or not. The driver of the radar was provided by Tim Distel and the driver of the ToF can be found here: [ToF driver][ToF_driver_url].
