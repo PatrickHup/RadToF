@@ -106,13 +106,24 @@ Bottom side:
 Radar soldering:
 
 1. Do not apply solder paste
-2. place on 150 °C pre heated hot plate
-3. heat with heat gun set to 395 °C till soldered
+2. Place on 150 °C pre heated hot plate
+3. Heat with heat gun set to 395 °C till soldered
 
-NOTE: if radar soldered unevenly, remove solder paste on pads and radar. Re-ball with stencil
+NOTE: if radar soldered unevenly, remove solder paste on pads and radar and re-ball with stencil
 
+ToF sensor:
+
+WARNING: high temperature might damage plastic housing
+
+1. Apply 138 °C solder paste on pads
+2. Place on pre heated hot plate at 150 °C
+3. Carefully apply heat with hot air gun
 
 ## Firmware
+
+Needed software:
+
+* [STM32cubeIDE][https://www.st.com/en/development-tools/stm32cubeide.html],	STM32cubeIDE version 1.15.1
 
 The current state of the firmware is to be able to verify if the board is functional or not. The driver of the radar was provided by Tim Distel and the driver of the ToF can be found here: [ToF driver][ToF_driver_url].
 
