@@ -150,8 +150,6 @@ The current state of the firmware is to be able to verify if the board is functi
 
 [ToF deck][ToF_deck_url] offers a different approach for the extension board, featuring a ToF sensor facing forwards and backwards.
 
-Check out these articles for similar contents:
-
 [Quad deck][quad_deck_url] offers four ToF sensors, facing in every direction.
 
 [Flow deck V2][flow_deck_url] offers a ToF and opticalflow sensor facing downwards.
