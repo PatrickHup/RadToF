@@ -77,6 +77,8 @@ File                                  | Content
 [RadToF_Draftsman.pdf]   	      | Draftsman of the PCB.
 [RadToF.xls]		              | Layer stack of the Flex PCB.
 
+The Altium project file [RadToF.prjpch] can be opened and edited using ALtium designer version 24.3.1
+
 Top and bottom view of the board:
 
 <p align="center">
@@ -85,7 +87,7 @@ Top and bottom view of the board:
 	</a>
 </p>
 
-Solder instruction:
+#### Solder instruction:
 
 #### Top side:
 
@@ -146,7 +148,7 @@ The current state of the firmware is to be able to verify if the board is functi
 
 ## Related work
 
-ToF deck, 
+[ToF deck][ToF_deck_url] offers a different approach for the extension board, featuring a ToF sensor facing forwards and backwards.
 
 ## Acknowledgment
 
@@ -174,14 +176,14 @@ Additional help: Tim Distel and Luka Schultess
 [stm32cubeide_url]: 			https://www.st.com/en/development-tools/stm32cubeide.html
 
 [ToF_driver_url]: 			https://www.st.com/en/embedded-software/stsw-img040.html
-
+[ToF_deck_url]: 			https://github.com/ETH-PBL/Matrix_ToF_Drones/tree/main
 <!--Subsection PCB-->
 [RadToF.pdf]:                          /Hardware/Project_Output/RadToF.pdf
 [RadToF_PDF3D.pdf]:                    /Hardware/Project_Output/RadToF_PDF3D.pdf
 [RadToF_BOM.xlsx]:                     /Hardware/Project_Output/RadToF_BOM.xlsx
 [RadToF_Draftsman.pdf]:                /Hardware/Project_Output/RadToF_Draftsman.pdf
 [RadToF.xls]:                          /Hardware/Project_Output/RadToF.xls
-
+[RadToF.prjpch]:                       /Hardware/RadToF.prjpcb
 
 
 [stmcubeIDE_url]:	               https://www.st.com/en/development-tools/stm32cubeide.html
