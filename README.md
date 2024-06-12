@@ -124,7 +124,7 @@ WARNING: high temperature might damage plastic housing
 
 Needed software:
 
-* [STM32cubeIDE][stm32cubeide_utl],	STM32cubeIDE version 1.15.1
+* [STM32cubeIDE][stm32cubeide_url], 		STM32cubeIDE version 1.15.1
 
 The current state of the firmware is to be able to verify if the board is functional or not. The driver of the radar was provided by Tim Distel and the driver of the ToF can be found here: [ToF driver][ToF_driver_url].
 
@@ -171,7 +171,7 @@ Additional help: Tim Distel and Luka Schultess
 [TPSM82912RDUR_url]:			https://www.ti.com/lit/ds/symlink/tpsm82913e.pdf
 [TPS7A2018PDQNR_url]:			https://www.ti.com/lit/ds/symlink/tps7a20.pdf
 [SN74AXC4T774BQB_url]:			https://www.ti.com/lit/ds/symlink/sn74axc4t774.pdf
-[stm32cubeide_utl]: 			https://www.st.com/en/development-tools/stm32cubeide.html
+[stm32cubeide_url]: 			https://www.st.com/en/development-tools/stm32cubeide.html
 
 [ToF_driver_url]: 			https://www.st.com/en/embedded-software/stsw-img040.html
 
