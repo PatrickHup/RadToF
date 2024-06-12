@@ -111,13 +111,13 @@ Top and bottom view of the board:
 
 1. Do not apply solder paste
 2. Place on 150 °C pre-heated hot plate
-3. Heat with a heat gun set to 395 °C till soldered
+3. Heat with a heat gun set to 395 °C untill soldered
 
 NOTE: if radar soldered unevenly, remove solder paste on pads and radar then re-ball radar with stencil
 
 #### ToF sensor soldering:
 
-WARNING: high temperature might damage plastic housing
+WARNING: high temperature might damage ToF sensors plastic housing
 
 1. Apply 138 °C solder paste on pads
 2. Place on pre-heated hot plate at 150 °C
