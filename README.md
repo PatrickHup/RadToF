@@ -150,6 +150,12 @@ The current state of the firmware is to be able to verify if the board is functi
 
 [ToF deck][ToF_deck_url] offers a different approach for the extension board, featuring a ToF sensor facing forwards and backwards.
 
+Check out these articles for similar contents:
+
+[Quad deck][quad_deck_url] offers four ToF sensors, facing in every direction.
+
+[Flow deck V2][flow_deck_url] offers a ToF and opticalflow sensor facing downwards.
+
 ## Acknowledgment
 
 Thanks goes to:
@@ -176,14 +182,16 @@ Additional help: Tim Distel and Luka Schultess
 [stm32cubeide_url]: 			https://www.st.com/en/development-tools/stm32cubeide.html
 
 [ToF_driver_url]: 			https://www.st.com/en/embedded-software/stsw-img040.html
-[ToF_deck_url]: 			https://github.com/ETH-PBL/Matrix_ToF_Drones/tree/main
+[ToF_deck_url]: 			https://github.com/ETH-PBL/Matrix_ToF_Drones
+[quad_deck_url]:			https://github.com/ETH-PBL/NanoSLAM
+[flow_deck_url]:			https://www.bitcraze.io/products/flow-deck-v2/
 <!--Subsection PCB-->
 [RadToF.pdf]:                          /Hardware/Project_Output/RadToF.pdf
 [RadToF_PDF3D.pdf]:                    /Hardware/Project_Output/RadToF_PDF3D.pdf
 [RadToF_BOM.xlsx]:                     /Hardware/Project_Output/RadToF_BOM.xlsx
 [RadToF_Draftsman.pdf]:                /Hardware/Project_Output/RadToF_Draftsman.pdf
 [RadToF.xls]:                          /Hardware/Project_Output/RadToF.xls
-[RadToF.prjpch]:                       /Hardware/RadToF.prjpcb
+[RadToF.prjpch]:                       /Hardware/RadToF.PrjPcb
 [.project]:			       /Firmware/.project
 [Firmware]:			       /Firmware
 
