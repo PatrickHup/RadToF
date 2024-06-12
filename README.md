@@ -141,8 +141,8 @@ The current state of the firmware is to be able to verify if the board is functi
 
 #### How to program extension board:
 
-1. Download STM32cubeIDE and the 'Firmware' folder
-2. open '.project' file with STM32cubeIDE (version 1.15.1)
+1. Download STM32cubeIDE and the [Firmware] folder
+2. open [.project] file with STM32cubeIDE (version 1.15.1)
 3. Connect extension board with computer with ST-LINK
 4. Compilie and upload firmware
 
