@@ -21,7 +21,7 @@
   <h3 align="center">"RadToF" Radar/ToF Deck</h3>
 
   <p align="center">
-    60 GHz rdar extension board for the CrazyFlie 2.1
+    60 GHz radar extension board for the CrazyFlie 2.1
     <br />
     <a href="https://github.com/PatrickHup/Test"><strong>Explore the docs »</strong></a>
   </p>
@@ -35,6 +35,7 @@
   * [Components](#hardware)
   * [PCB](#pcb)
 * [Firmware](#firmware)
+  * [Getting started](#getting-started)
 * [Related work](#related-work)
 * [Acknowledgment](#acknowledgment)
 
@@ -77,7 +78,7 @@ File                                  | Content
 [RadToF_Draftsman.pdf]   	      | Draftsman of the PCB.
 [RadToF.xls]		              | Layer stack of the Flex PCB.
 
-The Altium project file [RadToF.prjpch] can be opened and edited using ALtium designer version 24.3.1
+The Altium project file [RadToF.prjpch] can be opened and edited using Altium Designer version 24.3.1
 
 Top and bottom view of the board:
 
@@ -91,36 +92,36 @@ Top and bottom view of the board:
 
 #### Top side:
 
-1. Pre-heat the PCB over 2-3 hours from room temperature to 250 °C to allow water molecules in flex pcb to evaporate. This prevents delamination.
-2. Apply 217 °C solder paste on side marked "Top" with the help of a stencil if availible. NOTE: do not apply solder paste on sensor pads.
-3. Place components. Except the sensors (radar and ToF).
-5. Place assembled board, "Top" side up, on pre preheated (250 °C) hot plate.
-6. Wait for solder paste to melt and remove to cool.
-7. Verify functionality of power supply by checking voltages on debug pads.
+1. Pre-heat the PCB over 2-3 hours from room temperature to 250 °C to allow water molecules in the flex PCB to evaporate. This prevents delamination.
+2. Apply 217 °C solder paste on the side marked "Top" with the help of a stencil if available. NOTE: do not apply solder paste on sensor pads.
+3. Place components. Except for the sensors (radar and ToF).
+5. Place the assembled board, "Top" side up, on pre preheated (250 °C) hot plate.
+6. Wait for the solder paste to melt and remove to cool.
+7. Verify the functionality of the power supply by checking voltages on debug pads.
 
 #### Bottom side:
 
-1. Apply 217 °C solder paste on side marked "Bottom" with the help of a sencil if availible. NOTE: do not apply solder paste on sensor pads.
-2. Place components. Except the sensors (radar and ToF).
-3. Place assembled board, "Bottom" side up, on pre preheated (150 °C) hot plate.
-4. Use hot air gun, set to 395 °C, to carefully melt solder paste.
-5. Verify functionality of MCU by trying to program it.
+1. Apply 217 °C solder paste on the side marked "Bottom" with the help of a stencil if available. NOTE: do not apply solder paste on sensor pads.
+2. Place components. Except for the sensors (radar and ToF).
+3. Place the assembled board, "Bottom" side up, on pre preheated (150 °C) hot plate.
+4. Use a hot air gun, set to 395 °C, to carefully melt the solder paste.
+5. Verify the functionality of the MCU by trying to program it.
 
 #### Radar soldering:
 
 1. Do not apply solder paste
-2. Place on 150 °C pre heated hot plate
-3. Heat with heat gun set to 395 °C till soldered
+2. Place on 150 °C pre-heated hot plate
+3. Heat with a heat gun set to 395 °C till soldered
 
-NOTE: if radar soldered unevenly, remove solder paste and on pads and on radar then re-ball radar with stencil
+NOTE: if radar soldered unevenly, remove solder paste on pads and radar then re-ball radar with stencil
 
-#### ToF sensor:
+#### ToF sensor soldering:
 
 WARNING: high temperature might damage plastic housing
 
 1. Apply 138 °C solder paste on pads
-2. Place on pre heated hot plate at 150 °C
-3. Carefully apply heat with hot air gun
+2. Place on pre-heated hot plate at 150 °C
+3. Carefully apply heat with a hot air gun
 
 ## Firmware
 
@@ -132,7 +133,7 @@ The current state of the firmware is to be able to verify if the board is functi
 
 ### Getting started:
 
-#### material:
+#### Material:
 
 1. CrazyFlie 2.1
 2. RadToF expansion deck
@@ -143,20 +144,22 @@ The current state of the firmware is to be able to verify if the board is functi
 
 1. Download STM32cubeIDE and the [Firmware] folder
 2. open [.project] file with STM32cubeIDE (version 1.15.1)
-3. Connect extension board with computer with ST-LINK
+3. Connect the extension board with a computer with ST-LINK
 4. Compilie and upload firmware
 
 ## Related work
 
-[ToF deck][ToF_deck_url] offers a different approach for the extension board, featuring a ToF sensor facing forwards and backwards.
+If you are interested in this work, you might also be interested in these:
+
+[ToF deck][ToF_deck_url] offers a different approach for the extension board, featuring a ToF sensor facing forwards and backward.
 
 [Quad deck][quad_deck_url] offers four ToF sensors, facing in every direction.
 
-[Flow deck V2][flow_deck_url] offers a ToF and opticalflow sensor facing downwards.
+[Flow deck V2][flow_deck_url] offers a ToF and optical flow sensor facing downwards.
 
 ## Acknowledgment
 
-Thanks goes to:
+Thanks go to:
 
 Professor: Prof. Dr. Luca Benini
 
