@@ -126,7 +126,7 @@ WARNING: high temperature might damage plastic housing
 
 Needed software:
 
-* [STM32cubeIDE][stm32cubeide_url], 		STM32cubeIDE version 1.15.1
+* [STM32cubeIDE][stm32cubeide_url], 		STM32 programmer and compiler version 1.15.1
 
 The current state of the firmware is to be able to verify if the board is functional or not. The driver of the radar was provided by Tim Distel and the driver of the ToF can be found here: [ToF driver][ToF_driver_url].
 
@@ -184,6 +184,8 @@ Additional help: Tim Distel and Luka Schultess
 [RadToF_Draftsman.pdf]:                /Hardware/Project_Output/RadToF_Draftsman.pdf
 [RadToF.xls]:                          /Hardware/Project_Output/RadToF.xls
 [RadToF.prjpch]:                       /Hardware/RadToF.prjpcb
+[.project]:			       /Firmware/.project
+[Firmware]:			       /Firmware
 
 
 [stmcubeIDE_url]:	               https://www.st.com/en/development-tools/stm32cubeide.html
