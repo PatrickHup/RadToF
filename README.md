@@ -48,7 +48,7 @@ The RadToF project aims to develop a Printed Circuit Board (PCB) optimized for d
 
 ## Hardware
 
-The PCB accommodates four sensors: a radar and a depth camera pointing forwards, and the same setup pointing downwards. This board also includes an MCU that processes data before sending it to the CrazyFlie.
+The PCB accommodates four sensors: a radar and a depth camera pointing forwards, and the same setup pointing downwards. This board also includes an MCU that processes data before sending it to the CrazyFlie. The final board measures 3 cm x 4 cm and weighs 3.15 g.
 
 ### Components
 The main sensor is the 60 GHz radar by Infineon Technologies, using FMCW (Frequency Modulated Continuous Wave) operations to measure distances. The radar features a compact design with a built-in transmitter and three receivers. Additionally, we utilize an 8x8 zone ranging sensor by STMicroelectronics. The MCU chosen for this project is the STM32H562RIV6, selected for its performance and small form factor.
